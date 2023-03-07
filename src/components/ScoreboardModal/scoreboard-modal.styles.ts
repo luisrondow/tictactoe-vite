@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Scoreboard = styled.div`
   width: 100%;
   max-width: 500px;
-  margin: 4rem 0;
+  margin: 4rem 0 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 export const Score = styled.div`

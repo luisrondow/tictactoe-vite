@@ -8,6 +8,7 @@ const INITIAL_STATE: ScoreboardStates = {
   scoreboard: {
     1: 0,
     2: 0,
+    draw: 0,
   },
 };
 

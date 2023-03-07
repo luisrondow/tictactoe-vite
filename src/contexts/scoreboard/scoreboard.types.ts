@@ -1,12 +1,13 @@
 import { Actions, ContextType } from "../context.types";
 
 export type Player = {
-  player: 1 | 2;
+  player: 1 | 2 | "draw";
 };
 
 export type Scoreboard = {
   1: number;
   2: number;
+  draw: number;
 };
 
 export type ScoreboardProviderProps = {
@@ -18,7 +19,7 @@ export type ScoreboardStates = {
 };
 
 export type ScoreboardContextActions = {
-  updateScoreboard: (player: 1 | 2) => void;
+  updateScoreboard: (player: 1 | 2 | "draw") => void;
 };
 
 export type ScoreboardContextValues = ContextType<

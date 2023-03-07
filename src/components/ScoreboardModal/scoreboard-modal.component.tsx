@@ -21,11 +21,16 @@ const ScoreboardModal = (props: ScoreboardModalProps) => {
           <ScoreTitle>Jogador</ScoreTitle>
           <ScoreValue>{scoreboard?.[1]}</ScoreValue>
         </Score>
+        <ScoreTitle>X</ScoreTitle>
         <Score>
           <ScoreTitle>CPU</ScoreTitle>
           <ScoreValue>{scoreboard?.[2]}</ScoreValue>
         </Score>
       </Scoreboard>
+      <Score>
+        <ScoreTitle>Empates</ScoreTitle>
+        <ScoreValue>{scoreboard?.draw}</ScoreValue>
+      </Score>
     </Modal>
   );
 };

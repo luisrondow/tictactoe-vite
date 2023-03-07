@@ -50,20 +50,27 @@ const useGame = () => {
     alert(`${player === 1 ? "Player" : "CPU"} wins!`);
   };
 
+  const checkDraw = (): boolean => {
+    return board.filter((value) => value === 0).length === 0;
+  };
+
+  const checkWin = (player: number): boolean => {
+    return WINNING_COMBINATIONS.some((combination) => {
+      return combination.every((index) => {
+        return board[index] === player;
+      });
+    });
+  };
+
   useEffect(() => {
     if (board.filter((value) => value !== 0).length >= 5) {
-      const checkWin = (player: number): boolean => {
-        return WINNING_COMBINATIONS.some((combination) => {
-          return combination.every((index) => {
-            return board[index] === player;
-          });
-        });
-      };
-
       if (checkWin(1)) {
         handleWinner(1);
       } else if (checkWin(2)) {
         handleWinner(2);
+      } else if (checkDraw()) {
+        alert("Draw!");
+        actions?.updateScoreboard("draw");
       } else if (turn === 2) {
         setTimeout(() => {
           processCpuTurn();

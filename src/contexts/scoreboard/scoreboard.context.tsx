@@ -17,7 +17,7 @@ export const ScoreboardProvider = ({ children }: ScoreboardProviderProps) => {
     SCOREBOARD_INITIAL_VALUE
   );
 
-  const updateScoreboard = (player: 1 | 2) => {
+  const updateScoreboard = (player: 1 | 2 | "draw") => {
     dispatch({
       type: SCOREBOARD_ACTIONS.UPDATE_SCOREBOARD,
       payload: { player },
