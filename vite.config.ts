@@ -17,16 +17,16 @@ export default defineConfig({
         scope: "/",
         icons: [
           {
-            src: "/android-chrome-192x192.png",
+            src: "https://www.pwabuilder.com/assets/icons/icon_192.png",
             sizes: "192x192",
             type: "image/png",
-            purpose: "any maskable",
+            purpose: "any",
           },
           {
-            src: "/android-chrome-512x512.png",
+            src: "https://www.pwabuilder.com/assets/icons/icon_512.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable",
+            purpose: "maskable",
           },
         ],
         theme_color: "#ffffff",
